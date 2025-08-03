@@ -58,13 +58,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const MainContent = styled.main`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.spacing.lg};
-  gap: ${({ theme }) => theme.spacing.lg};
-`;
+
 
 function App() {
   return (

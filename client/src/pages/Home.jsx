@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { getTheme } from '../utils/theme';
-import { useNavigate } from 'react-router-dom';
-import Button from '../components/Button';
-import TextInput from '../components/TextInput';
 import Navbar from '../components/Navbar';
 import { getAllPosts } from '../api';
 
@@ -162,11 +158,9 @@ const GeneratedImage = styled.img`
 `;
 
 const Home = () => {
-  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [searchLoading, setSearchLoading] = useState(false);
 
   // Fetch posts from API with search parameter

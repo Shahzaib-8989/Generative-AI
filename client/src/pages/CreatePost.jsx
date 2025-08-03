@@ -115,9 +115,7 @@ const CreatePost = () => {
   const [name, setName] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
 
-  const handleGoBack = () => {
-    navigate("/");
-  };
+
 
   const handleGenerate = async () => {
     if (!prompt.trim()) return;
