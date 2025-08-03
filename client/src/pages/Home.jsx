@@ -165,7 +165,6 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   // Fetch posts from API with search parameter
   const fetchPosts = async (search = "") => {
@@ -179,11 +178,9 @@ const Home = () => {
       console.log("Fetching posts with search:", search);
       const response = await getAllPosts(search);
       setPosts(response.data);
-      setError(null);
       console.log("Fetched posts:", response.data.length);
     } catch (err) {
       console.error("Error fetching posts:", err);
-      setError("Failed to fetch posts");
       // Fallback to mock data if API fails
       const mockData = [
         {

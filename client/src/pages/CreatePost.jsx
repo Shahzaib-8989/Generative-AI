@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Button from "../components/Button";
 import TextInput from "../components/TextInput";
 import Navbar from "../components/Navbar";
@@ -109,7 +109,6 @@ const PlaceholderText = styled.p`
 `;
 
 const CreatePost = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [prompt, setPrompt] = useState(location.state?.prompt || "");
   const [name, setName] = useState("");
